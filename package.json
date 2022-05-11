@@ -15,5 +15,13 @@
     "movies"
   ],
   "author": "SKOL developer web <perezcatriel@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perezcatriel/api-peli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/perezcatriel/api-peli/issues"
+  },
+  "homepage": "https://github.com/perezcatriel/api-peli#readme"
 }
