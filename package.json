@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/perezcatriel/api-peli/issues"
   },
-  "homepage": "https://github.com/perezcatriel/api-peli#readme"
+  "homepage": "https://github.com/perezcatriel/api-peli#readme",
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  }
 }
