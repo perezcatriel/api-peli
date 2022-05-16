@@ -8,7 +8,7 @@ const api = axios.create({
 	},
 });
 
-async function getTredingMoviesPreview() {
+async function getTrendingMoviesPreview() {
 	const { data } = await api(`trending/movie/day`);
 
 	const movies = data.results;
@@ -56,5 +56,5 @@ async function getCategoriesPreview() {
 	});
 }
 
-getTredingMoviesPreview();
-getCategoriesPreview();
+/* getTredingMoviesPreview();
+getCategoriesPreview(); */
