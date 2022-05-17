@@ -1,2 +1,5 @@
 # Secrets.js (API_KEY)
 src/secrets.js
+
+# Node modules
+node_modules
