@@ -6,19 +6,26 @@ trendingBtn.addEventListener("click", () => {
 	location.hash = "#trends=";
 });
 
+window.history.pushState({ loadUrl: window.location.href }, null, "");
+// Agregando un estado de carga inical. para el boton back
+/* window.addEventListener(
+	"DOMContentLoaded",
+	() => {
+		navigator();
+
+		window.history.pushState({ loadUrl: window.location.href }, null, "");
+	},
+	false
+); */
+
 arrowBtn.addEventListener("click", () => {
-	/* const myPage = location.origin;
-	history.pushState(myPage, "home", ""); */
-	
-	history.back();
-
-	/* if (location.origin !== myPage) {
-		location.hash = `${myPage}?#`;
-	} */
-
+	const stateLoad = window.history.state ? window.history.state.loadUrl : "";
+	if (stateLoad.includes("#")) {
+		window.location.hash = "";
+	} else {
+		window.history.back();
+	}
 });
-
-
 
 window.addEventListener("DOMContentLoaded", navigator, true);
 window.addEventListener("hashchange", navigator, false);
@@ -103,6 +110,10 @@ function movieDetailsPage() {
 	categoriesPreviewSection.classList.add("inactive");
 	genericSection.classList.add("inactive");
 	movieDetailSection.classList.remove("inactive");
+
+	const [_, movieId] = location.hash.split("=");
+
+	getMovieById(movieId);
 }
 
 function searchPage() {
@@ -122,7 +133,7 @@ function searchPage() {
 	genericSection.classList.remove("inactive");
 	movieDetailSection.classList.add("inactive");
 
-	headerCategoryTitle.innerHTML = 'Busquedas';
+	headerCategoryTitle.innerHTML = "Busquedas";
 
 	const [_, query] = location.hash.split("=");
 	console.log(query);
@@ -146,5 +157,5 @@ function trendsPage() {
 	genericSection.classList.remove("inactive");
 	movieDetailSection.classList.add("inactive");
 
-	headerCategoryTitle.innerHTML = 'Tendencias';
+	headerCategoryTitle.innerHTML = "Tendencias";
 }
