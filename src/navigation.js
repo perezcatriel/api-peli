@@ -1,12 +1,24 @@
 searchFormBtn.addEventListener("click", () => {
-	location.hash = "#search=";
+	location.hash = "#search=" + searchFormInput.value;
 });
+
 trendingBtn.addEventListener("click", () => {
 	location.hash = "#trends=";
 });
+
 arrowBtn.addEventListener("click", () => {
-	location.hash = "";
+	/* const myPage = location.origin;
+	history.pushState(myPage, "home", ""); */
+	
+	history.back();
+
+	/* if (location.origin !== myPage) {
+		location.hash = `${myPage}?#`;
+	} */
+
 });
+
+
 
 window.addEventListener("DOMContentLoaded", navigator, true);
 window.addEventListener("hashchange", navigator, false);
@@ -109,6 +121,12 @@ function searchPage() {
 	categoriesPreviewSection.classList.add("inactive");
 	genericSection.classList.remove("inactive");
 	movieDetailSection.classList.add("inactive");
+
+	headerCategoryTitle.innerHTML = 'Busquedas';
+
+	const [_, query] = location.hash.split("=");
+	console.log(query);
+	getMoviesBySearch(query);
 }
 
 function trendsPage() {
@@ -127,4 +145,6 @@ function trendsPage() {
 	categoriesPreviewSection.classList.add("inactive");
 	genericSection.classList.remove("inactive");
 	movieDetailSection.classList.add("inactive");
+
+	headerCategoryTitle.innerHTML = 'Tendencias';
 }
