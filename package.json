@@ -1,35 +1,36 @@
 {
-  "name": "api-rest-peli",
-  "version": "1.0.0",
-  "description": "Consumo de Api de Movies",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "node_modules/.bin/http-serve  --watch"
-  },
-  "keywords": [
-    "api",
-    "rest",
-    "javascript",
-    "css",
-    "html",
-    "movies"
-  ],
-  "author": "SKOL developer web <perezcatriel@gmail.com>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/perezcatriel/api-peli.git"
-  },
-  "bugs": {
-    "url": "https://github.com/perezcatriel/api-peli/issues"
-  },
-  "homepage": "https://github.com/perezcatriel/api-peli#readme",
-  "devDependencies": {
-    "http-serve": "^1.0.1",
-    "typescript": "^4.6.4"
-  },
-  "dependencies": {
-    "gh-pages": "^4.0.0"
-  }
+	"name": "api-rest-peli",
+	"version": "1.0.0",
+	"description": "Consumo de Api de Movies",
+	"main": "index.html",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"serve": "node_modules/.bin/http-serve  --watch",
+		"deploy": "npm run build && gh-pages -d build"
+	},
+	"keywords": [
+		"api",
+		"rest",
+		"javascript",
+		"css",
+		"html",
+		"movies"
+	],
+	"author": "SKOL developer web <perezcatriel@gmail.com>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/perezcatriel/api-peli.git"
+	},
+	"bugs": {
+		"url": "https://github.com/perezcatriel/api-peli/issues"
+	},
+	"homepage": "https://github.com/perezcatriel/api-peli",
+	"devDependencies": {
+		"http-serve": "^1.0.1",
+		"typescript": "^4.6.4"
+	},
+	"dependencies": {
+		"gh-pages": "^4.0.0"
+	}
 }
