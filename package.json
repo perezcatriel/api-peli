@@ -6,7 +6,8 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"serve": "node_modules/.bin/http-serve  --watch",
-		"deploy": "npm run build && gh-pages -d build"
+		"deploy": "npm run build && gh-pages -d build",
+		"build": "mkdir -p build && cp -R src/* build/"
 	},
 	"keywords": [
 		"api",
@@ -16,7 +17,7 @@
 		"html",
 		"movies"
 	],
-	"author": "SKOL developer web <perezcatriel@gmail.com>",
+	"author": "DataCraft <datacraft.studios@gmail.com>",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
